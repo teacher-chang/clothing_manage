@@ -1,8 +1,8 @@
 <?php
 namespace app\admin\controller;
-use think\Controller;
 
-class Index extends Controller
+
+class Index
 {
     //加载登录页面
     public function login(){
