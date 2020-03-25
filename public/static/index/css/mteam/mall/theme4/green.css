@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*轮播按钮*/
+.m-product-img .hd li.on{ background-color: #090; }
+/*价格*/
+.m-team-price,.u-currency{color: #090;}
+/*切换*/
+.bg_current {border-bottom: 2px solid #090;}
+.bg_current a{color: #090}
+/*购买*/
+.msDmt_btn-buy { background: none repeat scroll 0 0 #090;}
+.msDmt_btn-cart {background: none repeat scroll 0 0 #090;}
+/* 多规格价格 */
+#m-mul-attr1 .m-select-mulprice, #m-mul-attr2 .m-select-mulprice {border:2px solid #090; margin: -1px;background: url("../../../../img/mteam/mall/theme1/img/green-select-price.gif") no-repeat bottom right; margin-left:4px;margin-top:5px;}
+
+/*弹出层按钮颜色*/
+.msDmt_secton10 .secton_btn .btn_left{background:#090;}
