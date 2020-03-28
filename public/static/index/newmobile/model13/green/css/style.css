@@ -1,0 +1,26 @@
+/* 头部 */
+.g-hd-inner{background:#fff; }
+
+/* 焦点图 */
+.m-focus .hd ul .on{ background:#186b08;font-size:0;}
+
+/* 模块风格一 */
+.m-default-default .m-wg-hd{ border-bottom:2px solid #006600;}
+.m-default-default .m-wg-hd h2{ border-bottom-color: #006600; color:#ffffff}
+.m-default-default .m-wg-hd a{color: #006600}
+
+/* 底部 */
+.m-ft{color:#fff;background:#186b08;}
+.m-ft a{color:#fff;}
+.m-ft ul{border-bottom:1px solid #124e07;}
+.m-ft-login{border-bottom: 1px solid #124e07;}
+
+
+/* 导航 */
+.m-nav{background:#fff;}
+.m-nav .u-first{}
+.m-nav ul li{border-bottom:1px solid #D7D8DA;}
+.m-nav ul li a{color:#186b08;background:url(../img/arrow.png) no-repeat center right;background-size: 1.3em 1.0em;}
+.m-nav ul li ul {background-color:#186b08;}
+.m-nav ul ul li {color:#fff;border-top:none;}
+.m-nav ul .select>a{}

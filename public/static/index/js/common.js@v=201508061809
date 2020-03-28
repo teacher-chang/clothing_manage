@@ -1,0 +1,128 @@
+$.fn.extend({  
+   input_tag:function(id,bind_type,msg_id,msg){
+   	$('#'+id).bind(bind_type, function() {
+		var cacct = $('#'+id).val();
+		if(cacct!='')
+		{
+			$('#'+msg_id).html('');
+		}
+		else
+		{
+			$('#'+msg_id).html(msg);
+		}
+	});
+   },
+   blockui:function(msg){
+         $.blockUI({
+                    message:msg,
+                    css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#ea4120',
+                    width:"400px",
+                    height:"40px",
+                    font:"400 24px/45px Microsoft YaHei",
+                    opacity: .5,
+                    color: '#fff'
+                   }
+         });
+         setTimeout($.unblockUI, 1000);
+   }
+});
+
+$(document).ready(function() {
+	$.fn.input_tag('username','keyup','ddduser','账号：');
+	$.fn.input_tag('password','keyup','dddcipher','密码：');
+	$(".ddd,.login_form_ddd,.contact_you_input,.contact_you_ddd").click(function(){
+	  $(this).parent("div").prev('input').focus();
+	});
+	/**登录**/
+	$('#login').click(function(){
+		yunadmin_login();
+	});
+	$("#verifycode").keyup(function(){
+		var verifycode = $("#verifycode").val();
+		
+		if(verifycode.length==4)
+		{
+		 $.post("login.php@action=verifycode",
+		{ 
+           verifycode: verifycode
+        }
+		, function(data){
+			if(data['ret_code'])
+			{
+				$(".is_right").css("display","block").attr("src","../static/img/new_login/true.png");
+			}
+			else
+			{
+				$(".is_right").css("display","block").attr("src","../static/img/new_login/close.png");
+			}
+		},'json');
+		}else{
+			$(".is_right").css("display","none");
+		}
+	});
+
+
+	
+});
+
+
+
+
+//绑定键盘点击事件
+$(document).keypress(function(e) {  
+    // 回车键事件  
+       if(e.which == 13) {  
+  			 yunadmin_login();
+       }  
+}); 
+
+
+function yunadmin_login(){
+		var user = $("#username").val();
+		var cipher = $("#password").val();
+		var verifycode = $("#verifycode").val();
+		if(user==""){
+		$.fn.blockui("请输入账号");
+		$("#user").focus();
+		return false;
+	    }
+	    if(cipher==""){
+		$.fn.blockui("请输入密码");
+		$("#cipher").focus();
+		return false;
+	    }
+	    if(verifycode=="") {
+	    $.fn.blockui("请输入验证码");
+		$("#verifycode").focus();
+		return false;
+	    }
+	    $.post("login.php",
+		{ 
+           username: user, 
+           password: cipher,
+           verifycode: verifycode
+        }
+		, function(data){
+			if(data['ret_code'])
+			{
+				window.location.href = data['ret_url'];
+			}
+			else
+			{
+				 $.fn.blockui(data['ret_msg']);
+				 $("#codeImg").attr('src', WEB_ROOT+'/captcha.php?'+Math.random());
+			}
+		},'json');	
+}
+
+//验证码
+function getCaptcha(id) {
+		var x = typeof(id)=='codeImg' ? jQuery('#'+id) : jQuery(id);
+		x.attr('src', WEB_ROOT+'/captcha.php?'+Math.random());
+		$(".is_right").css("display","none");
+		
+		
+};
