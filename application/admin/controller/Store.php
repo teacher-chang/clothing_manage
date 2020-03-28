@@ -41,11 +41,21 @@ class Store extends Controller{
         }
     }
 
-    //编辑
+    //编辑页面
     public function edit(){
         $id = input('get.id');
         $data = model('Store')->getEdit($id);
         return view('Store/edit',['data'=>$data]);
+    }
+    //编辑页面修改数据保存
+    public function update(){
+        $data = input('post.');
+        $res = model('Store')->updateStoreinfo($data);
+        if ($res){
+        // 返回结果为真，修改成功，重定向到列表页
+            return view('Store/index');
+        }
+
     }
 
 

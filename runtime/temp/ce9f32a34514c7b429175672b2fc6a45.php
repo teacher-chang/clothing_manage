@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:80:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\Store\edit.html";i:1585360567;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:80:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\Store\edit.html";i:1585360704;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -42,7 +42,7 @@
             <span>店铺管理页面 >> 店铺编辑页面</span>
         </div>
         <div class="providerAdd">
-            <form action="<?php echo url('Store/save'); ?>" method="post">
+            <form action="<?php echo url('Store/update'); ?>" method="post">
                 <!--div的class 为error是验证错误，ok是验证成功-->
                 <div class="">
                     <label for="providerId">店铺名称：</label>

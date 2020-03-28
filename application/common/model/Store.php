@@ -20,4 +20,13 @@ class Store extends Model{
         $data = Db::table('store')->where('id',$id)->find();
         return $data;
     }
+    public function updateStoreInfo($data){
+        $res = Db::table('store')->where('id',$data['id'])->update([
+            'store_name' => $data['store_name'],
+            'store_manage' => $data['store_manage'],
+            'manage_mobile' => $data['manage_mobile'],
+            'store_address' => $data['store_address'],
+        ]);
+        return $res;
+    }
 }
