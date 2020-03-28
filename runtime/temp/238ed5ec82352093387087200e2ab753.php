@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\index\login.html";i:1585148141;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -11,7 +12,7 @@
             <h1>服装连锁店管理系统</h1>
         </header>
         <section class="loginCont">
-            <form class="loginForm" action="{:url('index/login')}" method="post">
+            <form class="loginForm" action="<?php echo url('index/login'); ?>" method="post">
                 <span id="flag" style="display: none">用户名或密码不正确</span>
 
                 <div class="inputbox">
@@ -33,7 +34,7 @@
 
 </body>
 <script>
-    var flag = {$flag};
+    var flag = <?php echo $flag; ?>;
     if(flag==1){
         var note = document.getElementById('flag');
         note.style.display="block";

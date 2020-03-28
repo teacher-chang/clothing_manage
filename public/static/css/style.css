@@ -327,6 +327,9 @@ input[type='reset']:active, input[type='reset']:focus, .providerView a:hover, .p
     border: none;
     box-shadow: none;
 }
+input[type='submit']{
+    margin-bottom: 10px;
+}
 
 /*点击删除按钮后弹出的层*/
 .zhezhao {
@@ -382,6 +385,12 @@ input[type='reset']:active, input[type='reset']:focus, .providerView a:hover, .p
 .removeMain a:hover,.removeMain a:active{
     background: #679016;
 
+}
+#flag{
+    text-align: center;
+    color: red;
+    margin-top: -20px;
+    padding-bottom: 10px;
 }
 
 

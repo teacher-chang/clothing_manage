@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/admin/view/index/index.html";i:1585135905;s:113:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/admin/view/public/header.html";i:1585136006;s:113:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/admin/view/public/footer.html";i:1585122367;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\index\index.html";i:1585138152;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -14,7 +14,7 @@
 
     <div class="publicHeaderR">
         <p><span>下午好！</span><span style="color: #fff21b"> Admin</span> , 欢迎你！</p>
-        <a href="login.html">退出</a>
+        <a href="<?php echo url('index/logout'); ?>">退出</a>
     </div>
 </header>
 <!--时间-->
@@ -29,10 +29,10 @@
         <nav>
             <ul class="list">
                 <li ><a href="<?php echo url('user/index'); ?>">用户管理</a></li>
-                <li><a href="providerList.html">店铺管理</a></li>
-                <li><a href="userList.html">商品管理</a></li>
-                <li><a href="password.html">订单管理</a></li>
-                <li><a href="login.html">退出系统</a></li>
+                <li><a href="<?php echo url('store/index'); ?>">店铺管理</a></li>
+                <li><a href="<?php echo url('goods/index'); ?>">商品管理</a></li>
+                <li><a href="<?php echo url('order/index'); ?>">订单管理</a></li>
+                <li><a href="<?php echo url('index/login'); ?>">退出系统</a></li>
             </ul>
         </nav>
     </div>
