@@ -53,7 +53,7 @@ class Store extends Controller{
         $res = model('Store')->updateStoreinfo($data);
         if ($res){
         // 返回结果为真，修改成功，重定向到列表页
-            return view('Store/index');
+            return redirect('store/index');
         }
 
     }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:80:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\Store\edit.html";i:1585362765;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:80:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\Goods\edit.html";i:1585389063;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -39,36 +39,45 @@
     <div class="right">
         <div class="location">
             <strong>你现在所在的位置是:</strong>
-            <span>店铺管理页面 >> 店铺编辑页面</span>
+            <span>商品管理页面 >> 商品编辑页面</span>
         </div>
         <div class="providerAdd">
-            <form action="<?php echo url('Store/update'); ?>" method="post">
-                <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+            <form action="<?php echo url('Goods/update'); ?>" method="post">
                 <!--div的class 为error是验证错误，ok是验证成功-->
                 <div class="">
-                    <label for="providerId">店铺名称：</label>
-                    <input type="text" name="store_name" id="providerId" value="<?php echo $data['store_name']; ?>"/>
-                    <span>*请输入店铺名称</span>
+                    <input type="hidden" value="<?php echo $data['goods_id']; ?>" name="goods_id">
+                    <label for="providerId">商品名称：</label>
+                    <input type="text" name="goods_name" id="providerId" value="<?php echo $data['goods_name']; ?>"/>
+                    <span>*请输入商品名称</span>
                 </div>
                 <div>
-                    <label for="providerName">店铺管理员：</label>
-                    <input type="text" name="store_manage" id="providerName" value="<?php echo $data['store_manage']; ?>"/>
-                    <span >*请输入管理员名称</span>
+                    <label for="providerName">商品价格：</label>
+                    <input type="text" name="goods_price" id="providerName" value="<?php echo $data['goods_price']; ?>"/>
+                    <span >*请输入商品价格</span>
                 </div>
                 <div>
-                    <label for="people">联系电话：</label>
-                    <input type="text" name="manage_mobile" id="people" value="<?php echo $data['manage_mobile']; ?>"/>
-                    <span>*请输入联系电话</span>
+                    <label for="people">商品详情：</label>
+                    <input type="text" name="goods_detail" id="people" value="<?php echo $data['goods_detail']; ?>" />
+                    <span>*请输入商品详情</span>
 
                 </div>
                 <div>
-                    <label for="phone">地址：</label>
-                    <input type="text" name="store_address" id="phone" value="<?php echo $data['store_address']; ?>"/>
-                    <span>*请输入地址</span>
+                    <label for="phone">商品进货量：</label>
+                    <input type="text" name="goods_total" id="phone" value="<?php echo $data['goods_total']; ?>"/>
+                    <span>*请输入商品进货量</span>
+                </div>
+                <div>
+                    <label for="phone">所属门店：</label>
+                    <select name="store_id">
+                        <?php if(is_array($store) || $store instanceof \think\Collection || $store instanceof \think\Paginator): $i = 0; $__LIST__ = $store;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                        <option value="<?php echo $vo['id']; ?>" <?php if($data['store_id'] == $vo['id']): ?> selected="selected" <?php endif; ?>><?php echo $vo['store_name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
+                    <span>*请选择所属门店</span>
                 </div>
                 <div class="providerAddBtn">
                     <input style="line-height: 20px" type="submit" value="保存" />
-                    <a href="<?php echo url('store/index'); ?>">
+                    <a href="<?php echo url('goods/index'); ?>">
                         <input type="button" value="返回" onclick="history.back(-1)"/>
                     </a>
                 </div>

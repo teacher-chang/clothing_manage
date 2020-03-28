@@ -1,0 +1,51 @@
+﻿{include file="public/header"/}
+    <div class="right">
+        <div class="location">
+            <strong>你现在所在的位置是:</strong>
+            <span>商品管理页面 >> 商品添加页面</span>
+        </div>
+        <div class="providerAdd">
+            <form action="{:url('Goods/save')}" method="post">
+                <!--div的class 为error是验证错误，ok是验证成功-->
+                <div class="">
+                    <label for="providerId">商品名称：</label>
+                    <input type="text" name="goods_name" id="providerId"/>
+                    <span>*请输入商品名称</span>
+                </div>
+                <div>
+                    <label for="providerName">商品价格：</label>
+                    <input type="text" name="goods_price" id="providerName"/>
+                    <span >*请输入商品价格</span>
+                </div>
+                <div>
+                    <label for="people">商品详情：</label>
+                    <input type="text" name="goods_detail" id="people"/>
+                    <span>*请输入商品详情</span>
+
+                </div>
+                <div>
+                    <label for="phone">商品进货量：</label>
+                    <input type="text" name="goods_total" id="phone"/>
+                    <span>*请输入商品进货量</span>
+                </div>
+                <div>
+                    <label for="phone">所属门店：</label>
+                    <select name="store_id">
+                        {volist name="data" id="vo"}
+                        <option value="{$vo.id}" >{$vo.store_name}</option>
+                        {/volist}
+                    </select>
+                    <span>*请选择所属门店</span>
+                </div>
+                <div class="providerAddBtn">
+                    <input style="line-height: 20px" type="submit" value="保存" />
+                    <a href="{:url('goods/index')}">
+                        <input type="button" value="返回" onclick="history.back(-1)"/>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+{include file="public/footer"/}

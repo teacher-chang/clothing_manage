@@ -6,6 +6,7 @@
         </div>
         <div class="providerAdd">
             <form action="{:url('Store/update')}" method="post">
+                <input type="hidden" name="id" value="{$data.id}">
                 <!--div的class 为error是验证错误，ok是验证成功-->
                 <div class="">
                     <label for="providerId">店铺名称：</label>
