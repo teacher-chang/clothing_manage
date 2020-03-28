@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/index/index.html";i:1585144956;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/index/index.html";i:1585220236;}*/ ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -144,16 +144,16 @@ $(function(){
 	<tbody>
 		<tr>
 			<td style="width:25%;">
-				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/gys.png" style="width:80%;" alt="" /></a><br />
+				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/wt.jpg" style="width:80%;" alt="" /></a><br />
 			</td>
 			<td style="width:25%;">
-				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/gys.png" style="width:80%;" alt="" /></a><br />
+				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/wt2.jpg" style="width:80%;" alt="" /></a><br />
 			</td>
 			<td style="width:25%;">
-				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/gys.png" style="width:80%;" alt="" /></a><br />
+				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/wt3.jpg" style="width:80%;" alt="" /></a><br />
 			</td>
 			<td style="width:25%;">
-				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/gys.png" style="width:80%;" alt="" /></a><br />
+				<a href="product.html"><img class='lazyload' data-original="__PUBLIC__/index/img/wt4.jpg" style="width:80%;" alt="" /></a><br />
 			</td>
 		</tr>
 		<tr>
@@ -191,7 +191,7 @@ $(function(){
 		<div class="m-theme1 m-theme8">
 						<div class='m-mix-outer' style='margin-right:5%;'>
 				<a href="teamview_2474457.html" target="_blank"> 
-					<img class='m-mix-img lazyload' data-original="__PUBLIC__/index/img/gys.png" />
+					<img class='m-mix-img lazyload' data-original="__PUBLIC__/index/img/g1.jpg" />
 				</a>
 				<p class='m-mix-text'><a href="teamview_2474457.html" target="_blank">未绽放的江南雏菊80g</a></p>
 								<span class="u-price"><em>￥</em>26.00</span><span class="u-number">销量:0</span>
