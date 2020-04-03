@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:80:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\user\index.html";i:1585272916;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:80:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\user\index.html";i:1585547447;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -6,6 +6,7 @@
     <title>服装连锁店管理系统</title>
     <link rel="stylesheet" href="__PUBLIC__/css/public.css"/>
     <link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+    <script src="__PUBLIC__/kd/kd/kindeditor-min.js"></script>
 </head>
 <body style="height: 800px;">
 <!--头部-->
@@ -41,11 +42,11 @@
                 <strong>你现在所在的位置是:</strong>
                 <span>用户管理页面</span>
             </div>
-            <form action="<?php echo url('user/index'); ?>" method="post">
+            <form action="<?php echo url('User/index'); ?>" method="post">
             <div class="search">
                 <span>用户名：</span>
-                <input type="text" placeholder="请输入用户名"/>
-                <input type="button" value="查询"/>
+                <input type="text" placeholder="请输入用户名" name="user"/>
+                <input type="submit" value="查询" id="chaxun"/>
             </div>
             </form>
             <!--用户-->
@@ -64,8 +65,7 @@
                     <td><?php echo $vo['mobile']; ?></td>
                     <td><?php echo $vo['create_time']; ?></td>
                     <td>
-                        <a href="userView.html"><img src="__PUBLIC__/img/read.png" alt="查看" title="查看"/></a>
-                        <a href="userUpdate.html"><img src="__PUBLIC__/img/xiugai.png" alt="修改" title="修改"/></a>
+                        <a href="<?php echo url('User/edit',['id'=>$vo['user_id']]); ?>"><img src="__PUBLIC__/img/xiugai.png" alt="修改" title="修改"/></a>
                         <a href="<?php echo url('User/del',['id'=>$vo['user_id']]); ?>" ><img src="__PUBLIC__/img/schu.png" alt="删除" title="删除"/></a>
                     </td>
                 </tr>

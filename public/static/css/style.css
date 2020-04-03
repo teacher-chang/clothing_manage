@@ -393,5 +393,20 @@ input[type='submit']{
     padding-bottom: 10px;
 }
 
+#goods_img img{
+    width: 70px;
+    margin-top: 8px;
+}
+#chaxun{
+    width: 65px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 10px;
+    padding-top: 3px;
+    background-color: #a2d866;
+}
+
+
 
 

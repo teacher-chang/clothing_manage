@@ -18,10 +18,17 @@
                     <input type="text" name="goods_price" id="providerName" value="{$data.goods_price}"/>
                     <span >*请输入商品价格</span>
                 </div>
-                <div>
+                <div >
+                    <label for="people" >商品图片：</label>
+                    <div style="padding-left: 204px; margin-top: -25px">
+                        <input type="text" class="picture" name="goods_img" value='{$data.goods_img}' />
+                    </div>
+                </div>
+                <div >
                     <label for="people">商品详情：</label>
-                    <input type="text" name="goods_detail" id="people" value="{$data.goods_detail}" />
-                    <span>*请输入商品详情</span>
+                    <div style="padding-left: 204px; margin-top: -25px">
+                        <input type="text" class="pic1" name="goods_detail" id="people" value="{$data.goods_detail}" />
+                    </div>
 
                 </div>
                 <div>
@@ -49,4 +56,26 @@
 
     </div>
 </section>
+<script>
+    KindEditor.ready(function(K) {
+        editor = K.create('.pic1', {
+            resizeType : 1,
+            items : [
+                'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+                'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+                'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+                'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+                'anchor', 'link', 'unlink', '|', 'about']
+        });
+    });
+    KindEditor.ready(function(K) {
+        editor = K.create('.picture', {
+            resizeType : 1,
+            items : ['image']
+        });
+    });
+</script>
 {include file="public/footer"/}

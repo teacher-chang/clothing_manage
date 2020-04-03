@@ -4,12 +4,14 @@
             <strong>你现在所在的位置是:</strong>
             <span>店铺管理页面</span>
         </div>
+        <form method="post" action="{:url('Store/index')}">
         <div class="search">
             <span>店铺名称：</span>
-            <input type="text" placeholder="请输入店铺的名称"/>
-            <input type="button" value="查询"/>
+            <input type="text" placeholder="请输入店铺的名称" name="name"/>
+            <input type="submit" value="查询" id="chaxun"/>
             <a href="{:url('Store/add')}">添加店铺</a>
         </div>
+        </form>
         <!--供应商操作表格-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">

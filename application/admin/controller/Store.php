@@ -5,7 +5,11 @@ use think\Controller;
 class Store extends Controller{
     // 加载店铺列表页
     public function index(){
-        $data =  model('Store')->getStoreInfo();
+        $con = '';
+        if (request()->isPost()){
+            $con = input('post.');
+        }
+        $data =  model('Store')->getStoreInfo($con);
         return view('index',['data'=>$data]);
     }
     // 加载添加店铺页面

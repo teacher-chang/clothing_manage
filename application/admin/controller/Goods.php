@@ -5,8 +5,12 @@ use think\Controller;
 class Goods extends Controller{
     // 加载商品列表页
     public function index(){
+        $con = '';
+        if (request()->isPost()){
+            $con = input('post.');
+        }
         // 获取商品信息
-        $data = model('Goods')->getGoodsStoreInfo();
+        $data = model('Goods')->getGoodsStoreInfo($con);
         return view('index',['data'=>$data]);
     }
     //加载商品添加页
@@ -27,6 +31,7 @@ class Goods extends Controller{
         $goodsData = [
             'goods_name' => $data['goods_name'],
             'goods_price' => $data['goods_price'],
+            'goods_img' => $data['goods_img'],
             'goods_detail' => $data['goods_detail'],
             'goods_total' => $data['goods_total'],
             'sale_number' => 0,
@@ -58,7 +63,6 @@ class Goods extends Controller{
     public function update(){
         $data = input('post.');
         $res = model('Goods')->updateGoodsinfo($data);
-
         if ($res){
             // 返回结果为真，修改成功，重定向到列表页
             return redirect('goods/index');

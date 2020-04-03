@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\goods\add.html";i:1585382931;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\goods\add.html";i:1585486094;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -6,6 +6,7 @@
     <title>服装连锁店管理系统</title>
     <link rel="stylesheet" href="__PUBLIC__/css/public.css"/>
     <link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+    <script src="__PUBLIC__/kd/kd/kindeditor-min.js"></script>
 </head>
 <body style="height: 800px;">
 <!--头部-->
@@ -54,10 +55,17 @@
                     <input type="text" name="goods_price" id="providerName"/>
                     <span >*请输入商品价格</span>
                 </div>
-                <div>
+                <div >
+                    <label for="people" >商品图片：</label>
+                    <div style="padding-left: 204px; margin-top: -25px">
+                        <input type="text" class="picture" name="goods_img"  />
+                    </div>
+                </div>
+                <div >
                     <label for="people">商品详情：</label>
-                    <input type="text" name="goods_detail" id="people"/>
-                    <span>*请输入商品详情</span>
+                    <div style="padding-left: 204px; margin-top: -25px">
+                        <input type="text" class="pic1" name="goods_detail" id="people" />
+                    </div>
 
                 </div>
                 <div>
@@ -85,6 +93,28 @@
 
     </div>
 </section>
+<script>
+    KindEditor.ready(function(K) {
+        editor = K.create('.pic1', {
+            resizeType : 1,
+            items : [
+            'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+            'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+            'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+            'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+            'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+            'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+            'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+            'anchor', 'link', 'unlink', '|', 'about']
+        });
+    });
+    KindEditor.ready(function(K) {
+        editor = K.create('.picture', {
+            resizeType : 1,
+            items : ['image']
+        });
+    });
+</script>
 <footer class="footer">
 </footer>
 <script src="__PUBLIC__/js/time.js"></script>

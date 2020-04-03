@@ -1,0 +1,30 @@
+﻿{include file="public/header"/}
+    <div class="right">
+        <div class="location">
+            <strong>你现在所在的位置是:</strong>
+            <span>用户管理页面 >> 用户编辑页面</span>
+        </div>
+        <div class="providerAdd">
+            <form action="{:url('User/update')}" method="post">
+                <input type="hidden" name="user_id" value="{$data.user_id}">
+                <!--div的class 为error是验证错误，ok是验证成功-->
+                <div>
+                    <label for="providerName">用户名称：</label>
+                    <input type="text" name="username" id="providerName" value="{$data.username}"/>
+                </div>
+                <div>
+                    <label for="people">联系电话：</label>
+                    <input type="text" name="mobile" id="people" value="{$data.mobile}"/>
+                </div>
+                <div class="providerAddBtn">
+                    <input style="line-height: 20px" type="submit" value="保存" />
+                    <a href="{:url('user/index')}">
+                        <input type="button" value="返回" onclick="history.back(-1)"/>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+{include file="public/footer"/}

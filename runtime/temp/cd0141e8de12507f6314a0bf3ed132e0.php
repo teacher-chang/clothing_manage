@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\goods\index.html";i:1585386400;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\goods\index.html";i:1585548807;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -6,6 +6,7 @@
     <title>服装连锁店管理系统</title>
     <link rel="stylesheet" href="__PUBLIC__/css/public.css"/>
     <link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+    <script src="__PUBLIC__/kd/kd/kindeditor-min.js"></script>
 </head>
 <body style="height: 800px;">
 <!--头部-->
@@ -41,31 +42,35 @@
             <strong>你现在所在的位置是:</strong>
             <span>商品管理页面</span>
         </div>
+        <form action="<?php echo url('Goods/index'); ?>" method="post">
         <div class="search">
             <span>名称：</span>
-            <input type="text" placeholder="请输入商品的名称"/>
-            <input type="button" value="查询"/>
+            <input type="text" placeholder="请输入商品的名称" name="name"/>
+            <input type="submit" value="查询" id="chaxun"/>
             <a href="<?php echo url('Goods/add'); ?>">添加商品</a>
         </div>
+        </form>
         <!--供应商操作表格-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
                 <th width="5%">商品ID</th>
                 <th width="10%">商品名称</th>
                 <th width="10%">商品价格</th>
+                <th width="10%">商品图片</th>
                 <th width="10%">商品详情</th>
                 <th width="10%">商品进货量</th>
                 <th width="5%">销量</th>
                 <th width="5%">库存</th>
                 <th width="10%">所属门店</th>
                 <th width="10%">添加时间</th>
-                <th width="25%">操作</th>
+                <th width="15%">操作</th>
             </tr>
             <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
             <tr>
                 <td><?php echo $vo['goods_id']; ?></td>
                 <td><?php echo $vo['goods_name']; ?></td>
                 <td><?php echo $vo['goods_price']; ?></td>
+                <td id="goods_img"><?php echo $vo['goods_img']; ?></td>
                 <td><?php echo $vo['goods_detail']; ?></td>
                 <td><?php echo $vo['goods_total']; ?></td>
                 <td><?php echo $vo['sale_number']; ?></td>

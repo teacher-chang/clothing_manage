@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\index\index.html";i:1585138152;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\index\index.html";i:1585138152;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -6,6 +6,7 @@
     <title>服装连锁店管理系统</title>
     <link rel="stylesheet" href="__PUBLIC__/css/public.css"/>
     <link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+    <script src="__PUBLIC__/kd/kd/kindeditor-min.js"></script>
 </head>
 <body style="height: 800px;">
 <!--头部-->

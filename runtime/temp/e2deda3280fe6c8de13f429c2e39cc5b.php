@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\store\index.html";i:1585359853;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\store\index.html";i:1585918655;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -6,6 +6,7 @@
     <title>服装连锁店管理系统</title>
     <link rel="stylesheet" href="__PUBLIC__/css/public.css"/>
     <link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+    <script src="__PUBLIC__/kd/kd/kindeditor-min.js"></script>
 </head>
 <body style="height: 800px;">
 <!--头部-->
@@ -41,12 +42,14 @@
             <strong>你现在所在的位置是:</strong>
             <span>店铺管理页面</span>
         </div>
+        <form method="post" action="<?php echo url('Store/index'); ?>">
         <div class="search">
             <span>店铺名称：</span>
-            <input type="text" placeholder="请输入店铺的名称"/>
-            <input type="button" value="查询"/>
+            <input type="text" placeholder="请输入店铺的名称" name="name"/>
+            <input type="submit" value="查询" id="chaxun"/>
             <a href="<?php echo url('Store/add'); ?>">添加店铺</a>
         </div>
+        </form>
         <!--供应商操作表格-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">

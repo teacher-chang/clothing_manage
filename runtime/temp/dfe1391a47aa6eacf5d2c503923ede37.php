@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\order\index.html";i:1585275719;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585273666;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\order\index.html";i:1585919614;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -6,6 +6,7 @@
     <title>服装连锁店管理系统</title>
     <link rel="stylesheet" href="__PUBLIC__/css/public.css"/>
     <link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+    <script src="__PUBLIC__/kd/kd/kindeditor-min.js"></script>
 </head>
 <body style="height: 800px;">
 <!--头部-->
@@ -41,12 +42,13 @@
             <strong>你现在所在的位置是:</strong>
             <span>订单管理页面</span>
         </div>
+        <form action="<?php echo url('Order/index'); ?>" method="post">
         <div class="search">
             <span>店铺名称：</span>
-            <input type="text" placeholder="请输入店铺的名称"/>
-            <input type="button" value="查询"/>
-            <a href="providerAdd.html">添加店铺</a>
+            <input type="text" placeholder="请输入订单编号" name="order_sn"/>
+            <input type="submit" value="查询" id="chaxun"/>
         </div>
+        </form>
         <!--供应商操作表格-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
@@ -59,20 +61,25 @@
                 <th width="10%">创建时间</th>
                 <th width="30%">操作</th>
             </tr>
+            <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
             <tr>
-                <td>PRO-CODE—001</td>
-                <td>测试供应商001</td>
-                <td>韩露</td>
-                <td>15918230478</td>
-                <td>15918230478</td>
-                <td>15918230478</td>
-                <td>2015-11-12</td>
+                <td><?php echo $vo['order_sn']; ?></td>
+                <td><?php echo $vo['user_id']; ?></td>
+                <td><?php echo $vo['consignee']; ?></td>
+                <td><?php echo $vo['consignee_mobile']; ?></td>
+                <td><?php echo $vo['goods_id']; ?></td>
+                <td><?php if($vo['ship_status'] == 0): ?>
+                    <a href="<?php echo url('order/status',['status'=>$vo['ship_status'],'order_id'=>$vo['order_id']]); ?>"><button>待发货</button></a>
+                    <?php else: ?>
+                    <button>已发货</button>
+                    <?php endif; ?>
+                </td>
+                <td><?php echo $vo['create_time']; ?></td>
                 <td>
-                    <a href="providerView.html"><img src="__PUBLIC__/img/read.png" alt="查看" title="查看"/></a>
-                    <a href="providerUpdate.html"><img src="__PUBLIC__/img/xiugai.png" alt="修改" title="修改"/></a>
                     <a href="#" class="removeProvider"><img src="__PUBLIC__/img/schu.png" alt="删除" title="删除"/></a>
                 </td>
             </tr>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
         </table>
 
     </div>
