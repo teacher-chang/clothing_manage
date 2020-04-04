@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\index\login.html";i:1585148141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/admin/view/index/login.html";i:1585384522;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">

@@ -1,0 +1,47 @@
+#top{
+    width: 100%;
+}
+#top img{
+    width: 100%;
+}
+#tuijian{
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.tuijian_item{
+    font-size:6px;
+    float: left;
+    width: 20%;
+    margin-left: 4%;
+    text-align: center;
+}
+#tuijian img{
+    float: left;
+    width:100%;
+    margin-bottom: 5px;
+}
+
+#tuijian span{
+    font-size:6px;
+    width: 100%;
+    margin-top: 5px;
+}
+.goods{
+    font-size:6px;
+    margin-top: 65px;
+    clear: both;
+    width: 100%;
+}
+.goods_item{
+    width: 100%;
+}
+.goods_info{
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 15px;
+}
+.goods_info img{
+    width:90%;
+}
