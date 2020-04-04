@@ -53,4 +53,22 @@ class User extends Model
         $res = Db::table('user')->where('user_id',$user_id)->find();
         return $res;
     }
+
+    /**
+     * 个人信息编辑
+     * @param $user_id
+     * @param $data
+     * @return int|string
+     * @throws \think\Exception
+     * @throws \think\exception\PDOException
+     */
+    public function updateUserInfo($user_id,$data){
+        $arr = [
+            'mobile' => $data['mobile'],
+            'username' => $data['username'],
+            'user_pwd' => $data['user_pwd']
+        ];
+        $res = Db::table('user')->where('user_id',$user_id)->update($arr);
+        return $res;
+    }
 }

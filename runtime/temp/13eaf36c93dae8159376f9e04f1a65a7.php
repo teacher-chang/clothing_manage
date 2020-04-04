@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"E:\xampp\htdocs\clothing_manage\public/../application/index\view\user\user_center.html";i:1585969584;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"E:\xampp\htdocs\clothing_manage\public/../application/index\view\user\user_center.html";i:1586002714;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -29,18 +29,16 @@
 <div class="zhuce" style="margin-top: 60px;">
     <div style="width:96%;margin-left: 2%;background: lightblue;height: 120px;border-radius: 8px;font-size: 13px;">
 
-             <div style="margin-left: 20px;padding-top: 30px;float: left;">用户名：<?php echo $info['username']; ?></div>
-             <div style="margin-right: 20px;margin-top: 30px;float: right;">手机号：<?php echo $info['mobile']; ?></div>
-        <div style="margin-top: 30px;float: left;margin-left: 20px;">
-            订单数：
-        </div>
+             <div style="margin-left: 20px;padding-top: 30px;">用户名：<?php echo $info['username']; ?></div>
+             <div style="margin-left: 20px;margin-top: 30px;">手机号：<?php echo $info['mobile']; ?></div>
+
     </div>
     <form action="<?php echo url('index/regist'); ?>" method="post">
         <div class="text">
             <a href="<?php echo url('User/edit'); ?>"><span>个人信息</span></a>
         </div>
         <div class="text">
-            <a href=""><span>我的订单</span></a>
+            <a href="<?php echo url('Order/orderInfo'); ?>"><span>我的订单</span></a>
         </div>
         <div class="text">
             <a href="<?php echo url('index/logout'); ?>"><span>退出系统</span></a>

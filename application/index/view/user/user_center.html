@@ -28,18 +28,16 @@
 <div class="zhuce" style="margin-top: 60px;">
     <div style="width:96%;margin-left: 2%;background: lightblue;height: 120px;border-radius: 8px;font-size: 13px;">
 
-             <div style="margin-left: 20px;padding-top: 30px;float: left;">用户名：{$info.username}</div>
-             <div style="margin-right: 20px;margin-top: 30px;float: right;">手机号：{$info.mobile}</div>
-        <div style="margin-top: 30px;float: left;margin-left: 20px;">
-            订单数：
-        </div>
+             <div style="margin-left: 20px;padding-top: 30px;">用户名：{$info.username}</div>
+             <div style="margin-left: 20px;margin-top: 30px;">手机号：{$info.mobile}</div>
+
     </div>
     <form action="{:url('index/regist')}" method="post">
         <div class="text">
             <a href="{:url('User/edit')}"><span>个人信息</span></a>
         </div>
         <div class="text">
-            <a href=""><span>我的订单</span></a>
+            <a href="{:url('Order/orderInfo')}"><span>我的订单</span></a>
         </div>
         <div class="text">
             <a href="{:url('index/logout')}"><span>退出系统</span></a>
