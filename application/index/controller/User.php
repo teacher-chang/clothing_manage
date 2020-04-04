@@ -23,4 +23,10 @@ class User extends Controller
         return view('user_center',['info'=>$account_info,'user_id'=>$user_id]);
     }
 
+    public function edit(){
+        $user_id = session('user_id');
+        $data = model('User')->getUserInfo($user_id);
+        return view('user/user_info',['data'=>$data,'user_id'=>$user_id]);
+    }
+
 }

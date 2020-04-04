@@ -16,7 +16,7 @@ class Goods extends Controller{
     //加载商品添加页
     public function add(){
         //获取店铺信息，选择门店
-        $data = model('Store')->getStoreInfo();
+        $data = model('Store')->getStoreInfo($con = '');
         return view('add',['data'=>$data]);
     }
     // 添加保存数据
@@ -56,7 +56,7 @@ class Goods extends Controller{
     public function edit(){
         $id = input('get.id');
         $data = model('Goods')->getEdit($id);
-        $store = model('Store')->getStoreInfo();
+        $store = model('Store')->getStoreInfo($con='');
         return view('Goods/edit',['data'=>$data,'store'=>$store]);
     }
     //编辑页面修改数据保存

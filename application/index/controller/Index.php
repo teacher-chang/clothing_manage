@@ -12,7 +12,13 @@ class Index extends Controller
     public function index()
     {
         $user_id = session('user_id');
-        return view('index',['user_id'=>$user_id]);
+        $newData = model('Goods')->getGoodsByTime();
+        $hotData = model('Goods')->getGoodsBySale();
+        return view('index',[
+            'user_id'=>$user_id,
+            'new'=>$newData,
+            'hot'=>$hotData
+        ]);
     }
 
     /**

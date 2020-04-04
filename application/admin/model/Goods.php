@@ -4,14 +4,7 @@ use think\Db;
 use think\Model;
 
 class Goods extends Model{
-//    public function getGoodsInfo($con){
-//        $arr['goods_id'] = ['>',0];
-//        if ($con != ''){
-//            $arr['goods_name'] = ['=',$con['goods_name']];
-//        }
-//        $data = Db::table('goods')->where($arr)->order('id','desc')->select();
-//        return $data;
-//    }
+
     public function delGoods($id){
         $res = Db::table('goods')->where('goods_id',$id)->delete();
         return $res;

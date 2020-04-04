@@ -41,79 +41,36 @@
 	<!--商品模块-->
 	<div class="goods" style="margin-top: 10%;">
 		<div class="goods_item">
-			<div style="width: 90%;margin-left: 5%;margin-top: 35%;border-bottom: 1px solid red;padding-bottom: 4px;">2020春季新品</div>
+			<div style="width: 90%;margin-left: 5%;margin-top: 35%;border-bottom: 1px solid red;padding-bottom: 4px;font-weight: bold">2020春季新品</div>
+
+			{volist name="new" id="vo"}
+
 			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
+				{$vo.goods_img}
+				<div class="goods_name">{$vo.goods_name}</div>
 				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
+					<span>价格{$vo.goods_price}</span>
+					<span>销量{$vo.sale_number}</span>
 				</div>
 			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格：¥130</span>
-					<span>销量：3000</span>
-				</div>
-			</div>
+			{/volist}
 		</div>
 
 	</div>
 	<div class="goods" style="margin-top: 115%;margin-bottom: 120%;">
 		<div class="goods_item" style="margin-top: 20%;">
-			<div style="width: 90%;margin-left: 5%;margin-top: 31%;border-bottom: 1px solid red;padding-bottom: 4px;">2020人气热销</div>
+			<div style="width: 90%;margin-left: 5%;margin-top: 35%;border-bottom: 1px solid red;padding-bottom: 4px; padding-top:7px;font-weight: bold">2020人气热销</div>
+			{volist name="hot" id="vo"}
 			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
+				{$vo.goods_img}
+				<div class="goods_name">{$vo.goods_name}</div>
 				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
+					<span>{$vo.goods_price}</span>
+					<span>{$vo.sale_number}</span>
 				</div>
 			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
+			{/volist}
 		</div>
-
 	</div>
 	<!--底部导航-->
 	<div style="text-align:center;">
