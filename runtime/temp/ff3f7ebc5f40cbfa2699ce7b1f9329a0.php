@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:118:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/goods/goods_detail.html";i:1586052800;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:118:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/goods/goods_detail.html";i:1586053468;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -54,7 +54,7 @@
 				<a href="<?php echo url('goods/cart'); ?>">加入购物车</a>
 			</div>
 			<div class="buy">
-				<a href="<?php echo url('order/order_confirm'); ?>">立即购买</a>
+				<a href="<?php echo url('order/orderConfirm'); ?>">立即购买</a>
 			</div>
 		</div>
 	</div>

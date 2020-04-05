@@ -15,4 +15,8 @@ class Order extends Controller
             'no_num'=>$no_num
         ]);
    }
+
+   public function orderConfirm(){
+       return view('order/order_confirm');
+   }
 }
