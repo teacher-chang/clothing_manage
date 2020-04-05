@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:116:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/order/order_info.html";i:1586049889;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -17,7 +18,7 @@
 <body>
 
     <div class="head">
-        <span class="head_lf"><a href="{:url('User/user_center')}">返回</a></span>
+        <span class="head_lf"><a href="<?php echo url('User/user_center'); ?>">返回</a></span>
         <span>订单详情</span>
     </div>
     <div style="margin-top: 60px;">

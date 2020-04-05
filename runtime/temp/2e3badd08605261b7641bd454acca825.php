@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/index/index.html";i:1585466254;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/index/index.html";i:1586046185;}*/ ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -42,79 +42,36 @@
 	<!--商品模块-->
 	<div class="goods" style="margin-top: 10%;">
 		<div class="goods_item">
-			<div style="width: 90%;margin-left: 5%;margin-top: 35%;border-bottom: 1px solid red;padding-bottom: 4px;">2020春季新品</div>
+			<div style="width: 90%;margin-left: 5%;margin-top: 35%;border-bottom: 1px solid red;padding-bottom: 4px;font-weight: bold">2020春季新品</div>
+
+			<?php if(is_array($new) || $new instanceof \think\Collection || $new instanceof \think\Paginator): $i = 0; $__LIST__ = $new;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+
 			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
+				<div class="goods_imgs"><?php echo $vo['goods_img']; ?></div>
+				<div class="goods_name"><?php echo $vo['goods_name']; ?></div>
 				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
+					<span>价格<?php echo $vo['goods_price']; ?></span>
+					<span>销量<?php echo $vo['sale_number']; ?></span>
 				</div>
 			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格：¥130</span>
-					<span>销量：3000</span>
-				</div>
-			</div>
+			<?php endforeach; endif; else: echo "" ;endif; ?>
 		</div>
 
 	</div>
 	<div class="goods" style="margin-top: 115%;margin-bottom: 120%;">
 		<div class="goods_item" style="margin-top: 20%;">
-			<div style="width: 90%;margin-left: 5%;margin-top: 31%;border-bottom: 1px solid red;padding-bottom: 4px;">2020人气热销</div>
+			<div style="width: 90%;margin-left: 5%;margin-top: 35%;border-bottom: 1px solid red;padding-bottom: 4px; padding-top:7px;font-weight: bold">2020人气热销</div>
+			<?php if(is_array($hot) || $hot instanceof \think\Collection || $hot instanceof \think\Paginator): $i = 0; $__LIST__ = $hot;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
+				<?php echo $vo['goods_img']; ?>
+				<div class="goods_name"><?php echo $vo['goods_name']; ?></div>
 				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
+					<span><?php echo $vo['goods_price']; ?></span>
+					<span><?php echo $vo['sale_number']; ?></span>
 				</div>
 			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
-			<div class="goods_info">
-				<img src="__PUBLIC__/index/img/wt.jpg" alt="">
-				<div class="goods_name">商品名称</div>
-				<div class="goods_price">
-					<span>价格</span>
-					<span>销量</span>
-				</div>
-			</div>
+			<?php endforeach; endif; else: echo "" ;endif; ?>
 		</div>
-
 	</div>
 	<!--底部导航-->
 	<div style="text-align:center;">
