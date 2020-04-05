@@ -140,7 +140,7 @@ return [
 
     // 视图输出字符串内容替换
     'view_replace_str'       => [
-        '__PUBLIC__'=>'/wb/2019/clothing_manage/public/static',
+        '__PUBLIC__'=>'/clothing_manage/public/static',
         '__ROOT__' => ''
     ],
     // 默认跳转页面对应的模板文件

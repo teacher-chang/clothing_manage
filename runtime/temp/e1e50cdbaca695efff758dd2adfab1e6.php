@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\store\add.html";i:1585359420;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\store\add.html";i:1586050362;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\header.html";i:1585467897;s:83:"E:\xampp\htdocs\clothing_manage\public/../application/admin\view\public\footer.html";i:1585138152;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head lang="en">
@@ -46,24 +46,24 @@
             <form action="<?php echo url('Store/save'); ?>" method="post">
                 <!--div的class 为error是验证错误，ok是验证成功-->
                 <div class="">
-                    <label for="providerId">店铺名称：</label>
-                    <input type="text" name="store_name" id="providerId"/>
+                    <label>店铺名称：</label>
+                    <input type="text" name="store_name" id=""/>
                     <span>*请输入店铺名称</span>
                 </div>
                 <div>
-                    <label for="providerName">店铺管理员：</label>
-                    <input type="text" name="store_manage" id="providerName"/>
+                    <label>店铺管理员：</label>
+                    <input type="text" name="store_manage" id=""/>
                     <span >*请输入管理员名称</span>
                 </div>
                 <div>
-                    <label for="people">联系电话：</label>
-                    <input type="text" name="manage_mobile" id="people"/>
+                    <label>联系电话：</label>
+                    <input type="text" name="manage_mobile" id=""/>
                     <span>*请输入联系电话</span>
 
                 </div>
                 <div>
-                    <label for="phone">地址：</label>
-                    <input type="text" name="store_address" id="phone"/>
+                    <label>地址：</label>
+                    <input type="text" name="store_address" id=""/>
                     <span>*请输入地址</span>
                 </div>
                 <div class="providerAddBtn">
