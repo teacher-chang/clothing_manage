@@ -1,0 +1,55 @@
+.goods_detail{
+    margin-top: -10%;
+    width: 94%;
+    margin-left: 3%;
+
+}
+.goods_img{
+    width: 60%;
+    margin-left: 20%;
+}
+.goods_img img{
+    width: 100%;
+}
+.goods_info{
+    margin-top: 10px;
+    width: 100%;
+    height: 70px;
+}
+.goods_name{
+    font-weight: bold;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.goods_price{
+    color: red;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.detail{
+    width: 100%;
+
+}
+.title{
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom:1px solid red;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.detail_content{
+    padding-top: 5px;
+}
+.sales_info{
+    margin-top: 5px;
+}
+.kucun{
+    padding-left: 5px;
+}
+.sales{
+    float: right;
+    margin-right: 2%;
+}

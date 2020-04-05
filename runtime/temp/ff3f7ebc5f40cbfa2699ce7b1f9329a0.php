@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:118:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/goods/goods_detail.html";i:1586052138;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -12,11 +13,11 @@
 </head>
 <body>
 <div class="head">
-	<span class="head_lf"><a href="{:url('/index/index')}">返回</a></span>
+	<span class="head_lf"><a href="<?php echo url('/index/index'); ?>">返回</a></span>
 
 	用户登录
 
-	<span class="head_rg"><a href="{:url('index/regist')}"></a></span>
+	<span class="head_rg"><a href="<?php echo url('index/regist'); ?>"></a></span>
 </div>
 
 <div class="login">

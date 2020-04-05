@@ -46,7 +46,7 @@
 			{volist name="new" id="vo"}
 
 			<div class="goods_info">
-				<div class="goods_imgs">{$vo.goods_img}</div>
+				<a href="{:url('goods/goods_detail')}"><div class="goods_imgs">{$vo.goods_img}</div></a>
 				<div class="goods_name">{$vo.goods_name}</div>
 				<div class="goods_price">
 					<span>价格{$vo.goods_price}</span>

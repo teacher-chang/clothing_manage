@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/index/index.html";i:1586046185;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:111:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/index/index.html";i:1586050559;}*/ ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -47,7 +47,7 @@
 			<?php if(is_array($new) || $new instanceof \think\Collection || $new instanceof \think\Paginator): $i = 0; $__LIST__ = $new;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 
 			<div class="goods_info">
-				<div class="goods_imgs"><?php echo $vo['goods_img']; ?></div>
+				<a href="<?php echo url('goods/goods_detail'); ?>"><div class="goods_imgs"><?php echo $vo['goods_img']; ?></div></a>
 				<div class="goods_name"><?php echo $vo['goods_name']; ?></div>
 				<div class="goods_price">
 					<span>价格<?php echo $vo['goods_price']; ?></span>
