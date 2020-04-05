@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:118:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/goods/goods_detail.html";i:1586052138;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:118:"/Applications/XAMPP/xamppfiles/htdocs/wb/2019/clothing_manage/public/../application/index/view/goods/goods_detail.html";i:1586052800;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -47,10 +47,56 @@
 			</div>
 		</div>
 	</div>
+	<!--底部导航-->
+	<div style="text-align:center;">
+		<div class="footer">
+			<div class="cart">
+				<a href="<?php echo url('goods/cart'); ?>">加入购物车</a>
+			</div>
+			<div class="buy">
+				<a href="<?php echo url('order/order_confirm'); ?>">立即购买</a>
+			</div>
+		</div>
+	</div>
 
 
 </div>
 
 </body>
+<style>
+	.footer{
+		height:35px;
+		line-height: 35px;
+		width: 100%;
+		background-color: #ddd;
+		position: fixed;
+		bottom: 0;
+	}
+	.cart{
+		width: 50%;
+		float: left;
+		background: lightcoral;
+		text-align: center;
+		color:white;
+	}
+	.buy{
+		 width: 50%;
+		 float: left;
+		 background: rgba(100,207,250,1);
+
+		 text-align: center;
+		 color:white;
+	 }
+	.buy a {
+
+		text-align: center;
+		color:white;
+	}
+	.cart a {
+
+		text-align: center;
+		color:white;
+	}
+</style>
 
 </html>
