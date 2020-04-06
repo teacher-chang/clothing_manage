@@ -46,12 +46,13 @@
 			{volist name="new" id="vo"}
 
 			<div class="goods_info">
-				<a href="{:url('goods/goods_detail')}"><div class="goods_imgs">{$vo.goods_img}</div></a>
+				<a href="{:url('goods/goods_detail',['id'=>$vo.goods_id])}"><div class="goods_imgs">{$vo.goods_img}</div></a>
 				<div class="goods_name">{$vo.goods_name}</div>
 				<div class="goods_price">
-					<span>价格{$vo.goods_price}</span>
-					<span>销量{$vo.sale_number}</span>
+					<span>价格￥{$vo.goods_price}</span>
+					<span style="margin-left: 32%">销量{$vo.sale_number}</span>
 				</div>
+				<div>门店：{$vo.store_name}</div>
 			</div>
 			{/volist}
 		</div>
@@ -62,12 +63,13 @@
 			<div style="width: 90%;margin-left: 5%;margin-top: 35%;border-bottom: 1px solid red;padding-bottom: 4px; padding-top:7px;font-weight: bold">2020人气热销</div>
 			{volist name="hot" id="vo"}
 			<div class="goods_info">
-				{$vo.goods_img}
+				<a href="{:url('goods/goods_detail',['id'=>$vo.goods_id])}"><div class="goods_imgs">{$vo.goods_img}</div></a>
 				<div class="goods_name">{$vo.goods_name}</div>
 				<div class="goods_price">
-					<span>{$vo.goods_price}</span>
-					<span>{$vo.sale_number}</span>
+					<span>价格￥{$vo.goods_price}</span>
+					<span style="margin-left: 32%">销量{$vo.sale_number}</span>
 				</div>
+				<div>门店：{$vo.store_name}</div>
 			</div>
 			{/volist}
 		</div>

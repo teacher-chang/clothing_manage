@@ -20,7 +20,7 @@
         <span class="head_lf"><a href="{:url('User/user_center')}">返回</a></span>
         <span>订单详情</span>
     </div>
-    <div style="margin-top: 60px;">
+    <div style="margin-top: 60px; margin-bottom: 40px">
         <div class="order_num">
            <span style="margin-left: 40px;">已发货:{$shipped_num}单</span>
            <span style="float: right;margin-right: 40px;">待发货:{$no_num} 单</span>
@@ -66,6 +66,15 @@
         </div>
         {/volist}
         <!--循环结束-->
+    </div>
+    <!--底部导航-->
+    <div style="text-align:center;">
+        <div class="footer">
+
+            <div class="buy" id="buy_confirm">
+                <a href="#">  </a>
+            </div>
+        </div>
     </div>
 
 

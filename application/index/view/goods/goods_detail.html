@@ -23,18 +23,19 @@
 	<div class="goods_detail">
 		<!--商品大图-->
 		<div class="goods_img">
-			<img src="__PUBLIC__/index/img/wt.jpg"/>
+			{$data.goods_img}
+			<!--<img src="__PUBLIC__/index/img/wt.jpg"/>-->
 		</div>
 		<!--商品价格、名称-->
 		<div class="goods_info">
 			<!--商品名称-->
-			<div class="goods_name">2020新品 西装外套</div>
+			<div class="goods_name">{$data.goods_name}</div>
 			<!--商品价格-->
-			<div class="goods_price">¥ 399</div>
+			<div class="goods_price">¥ {$data.goods_price}</div>
 			<!--销量、库存-->
 			<div class="sales_info">
-				<span class="kucun">库存:3000</span>
-				<span class="sales">销量:458</span>
+				<span class="kucun">库存:{$data.inventory}</span>
+				<span class="sales">销量:{$data.sale_number}</span>
 			</div>
 		</div>
 		<!--商品详情-->
@@ -42,7 +43,7 @@
 			<div class="title">商品详情</div>
 			<!--商品详情内容-->
 			<div class="detail_content">
-				我是商品详情信息
+				{$data.goods_detail}
 			</div>
 		</div>
 	</div>
@@ -53,7 +54,7 @@
 				<a href="{:url('goods/cart')}">加入购物车</a>
 			</div>
 			<div class="buy">
-				<a href="{:url('order/orderConfirm')}">立即购买</a>
+				<a href="{:url('order/orderConfirm',['id'=>$data.goods_id])}">立即购买</a>
 			</div>
 		</div>
 	</div>

@@ -12,6 +12,8 @@ namespace app\index\controller;
 class Goods
 {
     public function goods_detail(){
-        return view('goods_detail');
+        $id = input('get.id');
+        $data = model('goods')->getGoodsInfo($id);
+        return view('goods_detail',['data'=>$data]);
     }
 }

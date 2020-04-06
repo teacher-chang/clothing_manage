@@ -57,6 +57,7 @@ class Index extends Controller
     }
 
     public function logout(){
+        session('user_id',null);
         return redirect('index/index');
     }
 

@@ -23,11 +23,12 @@ class Goods extends Controller{
     public function save(){
         // 接收数据
         $data = input('post.');
-        $validate = validate('Goods');
+
+//        $validate = validate('Goods');
         //数据格式校验
-        if (!$validate->scene('add')->check($data)){
-            return view('store/add');
-        }
+//        if (!$validate->scene('add')->check($data)){
+//            return view('goods/add');
+//        }
         $goodsData = [
             'goods_name' => $data['goods_name'],
             'goods_price' => $data['goods_price'],
